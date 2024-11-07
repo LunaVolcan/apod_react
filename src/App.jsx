@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import NasaPhoto from './NasaPhoto';
 import galaxy from './assets/green_galaxy.png';
-import './app.css';
+// import './App.css';
 
 const App = () => {
   const [photos, setPhotos] = useState([]);
