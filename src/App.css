@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=New+Amsterdam&display=swap');
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #023025;
+    --body-color: #000601;
+    --main-text-color: #CBE58E;
+    --slime: #A0CE3E;
+    --main-font: "New Amsterdam", sans-serif;
+    --secondary-font: "Baskervville SC", serif;
+
+}
+
+body {
+    background-color: var(--body-color);
+    font-family: var(--secondary-font);
+}
+
+#initial-container {
+  text-align: center;
+  font-size: x-large;
+  font-family: "New Amsterdam", sans-serif;
+  width: 35rem;
+  position: relative;
+  padding: 5rem 0 5rem 0;
+  margin: auto;
+  margin-top: 10rem;
+   background-image: url("./assets/green_galaxy.png");
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: center; 
+   border: 1px solid var(--main-text-color); 
+   border-radius: 60%; 
+   box-shadow: 3px 3px var(--slime), -1em 0 .4em var(--main-text-color);
+}
+
+h1 {
+  color: var(--main-text-color);
+  letter-spacing: .25rem;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+button {
+  padding: .5rem 1rem .5rem 1rem;
+  border-radius: 50px;
+  border: none;
+  display: block;
+  margin: auto;
+  font-family: "Baskervville SC", serif;
+  font-size: large;
+  background: linear-gradient(45deg, #25a7ae, var(--slime), var(--main-text-color));
+  color: var(--body-color);
+}
+
+button:hover {
+  background: linear-gradient(45deg, var(--main-text-color), var(--slime), #25a7ae);
+}
+
+#reset-button {
+  display: none;
+}
+
+img {
+  border: solid var(--main-text-color);
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-family: var(--main-font);
+  font-size: 3rem;
+  font-weight: lighter;
+  text-align: center;
+  background: -webkit-linear-gradient(#25a7ae, var(--slime), var(--main-text-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  color: var(--main-text-color);
+  text-align: center;
+}
+
+@media (min-width: 300px) and (max-width: 699px) {
+
+  #photos-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+  }
+
+  img {
+      margin: 10px 0;
+  }
+
+  button {
+      
+      color: var(--body-color)
+
+  }
+}
+
+@media (min-width: 700px) and (max-width: 914px) {
+
+  #photos-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      padding: 1rem;
+  }
+
+  .photo-card img {
+      grid-row: 2;
+  }
+
+  .photo-card h2 {
+      grid-row: 1;
+  }
+
+  .photo-card p {
+      grid-row: 3;
+  }
+}
+
+@media (min-width:915px) and (max-width: 3000px) {
+
+  #photos-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      padding: 1rem;
+  }
+
+  .photo-card img {
+      grid-row: 2;
+  }
+
+  .photo-card h2 {
+      grid-row: 1;
+  }
+
+  .photo-card p {
+      grid-row: 3;
+  }
+
+  img {
+      max-width: 85%;
+      display: block; 
+      margin-left: auto; 
+      margin-right: auto;
+  }
+}
